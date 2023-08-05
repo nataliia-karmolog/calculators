@@ -1,0 +1,215 @@
+
+.matrixs_container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+
+  .matrixs-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .matrix-result {
+    //border: 1px solid #690080;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid #263e80;
+    padding-top: 45px;
+    height: 650px;
+
+    .purposes {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      width: 500px;
+      .table-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      h3 {
+        font-family: 'Playfair Display', serif;
+        margin: 0;
+        color: #263E80;
+      }
+
+      .purposes_top {
+        //border: 1px solid yellowgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        gap: 25px;
+
+        .purpose {
+          //border: 1px solid blue;
+
+          .word {
+            padding-left: 10px;
+          }
+
+          .circle_purpose {
+            width: 30px;
+            height: 30px;
+            font-size: 19px;
+          }
+
+        }
+
+      }
+
+      .purpose_general {
+        //border: 1px solid blue;
+        height: 80px;
+        margin-top: -5px;
+        margin-bottom: -20px;
+
+        .circle_solo {
+          .circle {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            background: #EDE4FF;
+            border: 1px solid #263E80;
+          }
+
+        }
+      }
+    }
+
+    .matrix-compatibility {
+      min-height: 610px;
+      height: 610px;
+      overflow: visible;
+      //border: 1px solid green;
+    }
+  }
+
+  .btn_compatibility-matrix {
+    width: 250px;
+    height: 45px;
+    background-color: #8949A4;
+
+    &:hover {
+      //background: -moz-linear-gradient(45deg, rgb(255, 231, 237) 0%, #f9dce1 25%, #bdbdf8 50%, #caeeec 75%, #caeeec 100%);
+      //background: -webkit-linear-gradient(45deg, rgb(255, 231, 237) 0%, #f9dce1 25%, #bdbdf8 50%, #caeeec 75%, #caeeec 100%);
+      //background: linear-gradient(45deg, rgb(255, 231, 237) 0%, #caeeec 25%, #caeeec 50%, #bdbdf8 75%, #f9dce1 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+      background: #263E80;
+
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+
+  .matrixs_container {
+    .table-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 160px;
+      gap: 10px;
+    }
+
+    .matrixs-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      @media screen and (max-width: 800px) {
+        width: 460px;
+      }
+    }
+
+    .matrix-result {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #263E80;
+      padding-top: 0px;
+
+
+      @media screen and (max-width: 800px) {
+        height: 650px;
+        .matrix-compatibility {
+          height: 300px;
+        }
+        .purposes {
+          width: 100%;
+          position: relative;
+          left: 0%;
+          top: -1%;
+
+          .table-wrapper {
+            gap: 10px;
+          }
+
+          h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            color: #263E80;
+          }
+
+          .purposes_top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            gap: 5px;
+
+            .purpose {
+              //border: 1px solid blue;
+              .circle_purpose {
+                width: 30px;
+                height: 30px;
+                background: #D7D6D4;
+                color: #263E80;
+              }
+              .circle_sum {
+                background: #263E80;
+                color: white;
+              }
+            }
+
+          }
+
+          .purpose_general {
+            //border: 1px solid blue;
+            height: 80px;
+            margin-top: -5px;
+            margin-bottom: -20px;
+
+            .circle_solo {
+              .circle {
+                width: 30px;
+                height: 30px;
+                background: #263E80;
+                font-size: 18px;
+                color: white;
+              }
+            }
+
+          }
+        }
+      }
+
+      .matrix-compatibility {
+        min-height: 300px;
+        overflow: visible;
+
+        @media screen and (max-width: 800px) {
+          min-height: 345px;
+        }
+      }
+    }
+  }
+}
